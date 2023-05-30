@@ -1,6 +1,13 @@
 # Print Label A7 Size Giao Hang Tiet Kiem
 
 Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.
+## Table of Contents
+- [Features](#features)
+- [Installation 🔥](#installation-)
+- [Usage 🐕](#usage-)
+- [Contributing 🔨](#contributing-)
+- [Thanks for using our services](#thanks-for-using-our-services)
+- [License](#license)
 
 ## Features
 Rearrange the sections in the print label from free size to A7 size.
@@ -21,14 +28,6 @@ http://localhost:3000/?logo=https://i.imgur.com/9QX3X5X.png&hash=ey....
 ```
 
 ![Cusomize Logo](https://github.com/namhong1412/print-label-a7-size-ghtk/assets/19573386/ce529688-8491-4cfe-8b9c-9e32a048b27c)
-
-
-## Table of Contents
-- [Installation 🔥](#installation-)
-- [Usage 🐕](#usage-)
-- [Contributing 🔨](#contributing-)
-- [Thanks for using our services](#thanks-for-using-our-services)
-- [License](#license)
 
 ## Installation 🔥
 
