@@ -2,6 +2,27 @@
 
 Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.
 
+## Features
+Rearrange the sections in the print label from free size to A7 size.
+
+**Before**
+
+![Before](https://github.com/namhong1412/print-label-a7-size-ghtk/assets/19573386/30796657-98f3-4eab-a64a-11ef45297acf)
+
+**After**
+
+![After](https://github.com/namhong1412/print-label-a7-size-ghtk/assets/19573386/506b7884-b4fb-4493-ace5-3692cee78e98)
+
+**You can cusomize the logo on the print label**
+
+You just add param **logo=link_logo** in the params on the URL
+```text
+http://localhost:3000/?logo=https://i.imgur.com/9QX3X5X.png&hash=ey....
+```
+
+![Cusomize Logo](https://github.com/namhong1412/print-label-a7-size-ghtk/assets/19573386/ce529688-8491-4cfe-8b9c-9e32a048b27c)
+
+
 ## Table of Contents
 - [Installation 🔥](#installation-)
 - [Usage 🐕](#usage-)
