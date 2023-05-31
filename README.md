@@ -51,7 +51,7 @@ http://localhost:3000/?logo=https://i.imgur.com/9QX3X5X.png&hash=ey....
 
   ```bash
   npm install
-  ```[requestly_rules.json](..%2Frequestly_rules.json)
+  ```
 
 ## Usage 🐕
 
