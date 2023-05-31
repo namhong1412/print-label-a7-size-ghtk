@@ -1,0 +1,29 @@
+[
+  {
+    "createdBy": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+    "creationDate": 1674877521855,
+    "currentOwner": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+    "description": "",
+    "groupId": "",
+    "id": "Redirect_8fpja",
+    "isSample": false,
+    "lastModifiedBy": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+    "modificationDate": 1680711282934,
+    "name": "Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.",
+    "objectType": "rule",
+    "pairs": [
+      {
+        "destination": "http://localhost:3000/custom_print.js",
+        "id": "6ospn",
+        "source": {
+          "key": "Url",
+          "operator": "Matches",
+          "value": "/https://khachhang.giaohangtietkiem.vn/web/js/app.(.*).js$/i"
+        }
+      }
+    ],
+    "preserveCookie": false,
+    "ruleType": "Redirect",
+    "status": "Active"
+  }
+]
