@@ -1,13 +1,13 @@
 {
   "name": "ghtk-order-printing",
   "version": "1.0.0",
-  "description": "Restructure the order printing page of GHTK",
+  "description": "Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js"
   },
   "keywords": [],
-  "author": "https://github.com/namhong1412",
+  "author": "https://facebook.com/namhong1412",
   "license": "ISC",
   "type": "module",
   "prettier": {

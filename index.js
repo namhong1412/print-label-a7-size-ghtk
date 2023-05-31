@@ -7,7 +7,7 @@ const port = 3000
 
 const OPTION_CUSTOM_LOGO = {
   replace: 1,
-  sunken: 2,
+  sunken: 2
 }
 const GHTK_API_URL = "https://web.giaohangtietkiem.vn/api/v2/print-label"
 const GHTK_ORIGIN = "https://khachhang.giaohangtietkiem.vn"
@@ -45,15 +45,15 @@ app.get("/", async (req, res) => {
         pragma: "no-cache",
         referer: GHTK_ORIGIN,
         "sec-ch-ua":
-          '"Google Chrome";v="111", "Not(A:Brand";v="8", "Chromium";v="111"',
+          "\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\"",
         "sec-ch-ua-mobile": "?0",
-        "sec-ch-ua-platform": '"macOS"',
+        "sec-ch-ua-platform": "\"macOS\"",
         "sec-fetch-dest": "empty",
         "sec-fetch-mode": "cors",
         "sec-fetch-site": "same-site",
         "user-agent":
-          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
-      },
+          "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+      }
     }
 
     const htmlRaw = await axios(config)
@@ -63,10 +63,10 @@ app.get("/", async (req, res) => {
       .catch((error) => {
         console.log(error)
       })
-    const result = await restructureDeliveryNote({
+    const result = await rearrangePrintLabel({
       html: htmlRaw,
       logo,
-      option,
+      option
     })
 
     res.setHeader("Content-Type", "text/html")
@@ -77,7 +77,7 @@ app.get("/", async (req, res) => {
   }
 })
 
-const restructureDeliveryNote = async ({ html, logo, option = 1 }) => {
+const rearrangePrintLabel = async ({ html, logo, option = 1 }) => {
   const $ = load(html)
 
   $("style:not([media])").remove()
@@ -168,7 +168,7 @@ const restructureDeliveryNote = async ({ html, logo, option = 1 }) => {
   })
 
   $(
-    'img[src="https://s.giaohangtietkiem.vn/customer/img/transport-truck-icon.png"]'
+    "img[src=\"https://s.giaohangtietkiem.vn/customer/img/transport-truck-icon.png\"]"
   ).attr("style", "height: 30px;width: auto !important;margin-right: 15px;")
 
   $("div.aui-group.label-row").each((i, el) => {
@@ -246,7 +246,7 @@ const restructureDeliveryNote = async ({ html, logo, option = 1 }) => {
     "font-weight: bold;padding: 0 0 10px 0; text-align: center; text-decoration: none;"
   )
 
-  if (logo && option == OPTION_CUSTOM_LOGO.replace) {
+  if (logo && option === OPTION_CUSTOM_LOGO.replace) {
     $(
       "img[src='https://s.giaohangtietkiem.vn/customer/img/ghtk_logo.png']"
     ).attr("src", logo)
@@ -263,10 +263,10 @@ const restructureDeliveryNote = async ({ html, logo, option = 1 }) => {
     `
   )
 
-  if (logo && option == OPTION_CUSTOM_LOGO.sunken) {
+  if (logo && option === OPTION_CUSTOM_LOGO.sunken) {
     $("div.sheet").prepend(
       `
-      <img class="sunken-custom-logo" src="${CUSTOM_LOGO}">
+      <img class="sunken-custom-logo" src="${CUSTOM_LOGO}" alt="Logo"/>
       `
     )
   }

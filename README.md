@@ -1,7 +1,9 @@
 # Print Label A7 Size Giao Hang Tiet Kiem
 
 Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.
+
 ## Table of Contents
+
 - [Features](#features)
 - [Installation 🔥](#installation-)
 - [Usage 🐕](#usage-)
@@ -10,6 +12,7 @@ Rearrange the sections in the print label of Giao Hàng Tiết Kiệm.
 - [License](#license)
 
 ## Features
+
 Rearrange the sections in the print label from free size to A7 size.
 
 **Before**
@@ -23,6 +26,7 @@ Rearrange the sections in the print label from free size to A7 size.
 **You can cusomize the logo on the print label**
 
 You just add param **logo=link_logo** in the params on the URL
+
 ```text
 http://localhost:3000/?logo=https://i.imgur.com/9QX3X5X.png&hash=ey....
 ```
@@ -47,23 +51,73 @@ http://localhost:3000/?logo=https://i.imgur.com/9QX3X5X.png&hash=ey....
 
   ```bash
   npm install
-  ```
-  
+  ```[requestly_rules.json](..%2Frequestly_rules.json)
+
 ## Usage 🐕
 
 To start the project, use the following command:
+
   ```bash
   npm start
   ```
 
-This will run the project and you should see the output in the console or a web server running at http://localhost:3000 (or another specified port).
+This will run the project and you should see the output in the console or a web server running
+at http://localhost:3000 (or another specified port).
 
+## Usage on Giao Hàng Tiết Kiệm
+
+***_Notes:_ Before using this feature, You must log in to Giao Hàng Tiết Kiệm.***
+
+- Step 1: Login to [Giao Hàng Tiết Kiệm](https://khachhang.giaohangtietkiem.vn/)
+
+- Step 2:
+  Install [Requestly](https://chrome.google.com/webstore/detail/requestly-redirect-url-mo/mdnleldcmiljblolnjhpnblkcekpdkpa)
+  extension on Chrome.
+  Using file [requestly_rules.json](..%2Frequestly_rules.json) to import
+  on [Requestly](https://app.requestly.io/rules/my-rules).
+
+  ```json
+  [
+    {
+      "createdBy": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+      "creationDate": 1674877521855,
+      "currentOwner": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+      "description": "",
+      "groupId": "",
+      "id": "Redirect_8fpja",
+      "isSample": false,
+      "lastModifiedBy": "BbW6T55UJMSZlsriKYMv91KrKJ02",
+      "modificationDate": 1680711282934,
+      "name": "GHTK App Redirect",
+      "objectType": "rule",
+      "pairs": [
+        {
+          "destination": "http://localhost:3000/custom_print.js",
+          "id": "6ospn",
+          "source": {
+            "key": "Url",
+            "operator": "Matches",
+            "value": "/https://khachhang.giaohangtietkiem.vn/web/js/app.(.*).js$/i"
+          }
+        }
+      ],
+      "preserveCookie": false,
+      "ruleType": "Redirect",
+      "status": "Active"
+    }
+  ]
+  
+  ```
+  
+- Step 3: Open [Giao Hàng Tiết Kiệm](https://khachhang.giaohangtietkiem.vn/) and print label.
 
 ## Contributing 🔨
 
-While this product has imperfections, I eagerly anticipate contributions from other skilled individuals in the developer community.
+While this product has imperfections, I eagerly anticipate contributions from other skilled individuals in the developer
+community.
 
-We welcome pull requests. However, if you plan on making significant changes, please initiate an issue to discuss your proposed modifications first.
+We welcome pull requests. However, if you plan on making significant changes, please initiate an issue to discuss your
+proposed modifications first.
 
 It is essential to ensure that tests are updated as needed.
 
